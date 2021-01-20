@@ -19,17 +19,8 @@ router.post("/signup", [verifyRole.allRole], controllers.signup);
        - verifyRole.isReader
        And verifyRole.allRole
 */
-router.get(
-       "/home",
-       [jsonWebToken.verifyToken, verifyRole.isUser],
-       function (request, response) {
-              response.send(
-                     "Welcome " +
-                            request.user.user.name +
-                            ", you role is '" +
-                            request.user.role[0].role +
-                            "'"
-              );
+router.get("/home", [jsonWebToken.verifyToken, verifyRole.isUser], function (request, response) {
+              response.send("Welcome " + request.user.user.name + ", you role is '" + request.user.role[0].role + "'");
        }
 );
 ```
