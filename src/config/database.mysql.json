@@ -1,0 +1,9 @@
+{
+       "databaseMysql": {
+              "host": "localhost",
+              "port": 3306,
+              "user": "sa",
+              "password": "admin",
+              "database": "api-rest-full"
+       }
+}
